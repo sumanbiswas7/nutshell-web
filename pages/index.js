@@ -32,14 +32,19 @@ export default function Home() {
           </div>
         </nav>
         <div className={styles.section_1}>
-          <div className={styles.download_section}>
+          <a
+            href="/"
+            target={"_blank"}
+            rel={"noreferrer"}
+            className={styles.download_section}
+          >
             <p>
               We have created a dummy app, you can download it here your overall
               app will look like this. But please remember that most of the
               things like themes, logos, fonts are customizable. And depending
               on the demand we will work on new templates as well.
             </p>
-          </div>
+          </a>
         </div>
         <div className={styles.section_2}>
           <img
@@ -51,9 +56,14 @@ export default function Home() {
             className={styles.section_2__bottom_right_shape}
           />
           <img src="/home/phone_mockup.webp" className={styles.mockup} />
-          <div className={styles.download_btn}>
+          <a
+            href="/"
+            target={"_blank"}
+            rel="noreferrer"
+            className={styles.download_btn}
+          >
             <HiOutlineDownload color="#FFF" size={30} />
-          </div>
+          </a>
         </div>
       </main>
 
