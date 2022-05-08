@@ -10,6 +10,7 @@ $accent-color: #fd9228;
     width: $main_width;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
     .full_logo {
       height: 2rem;
       margin-left: 1rem;
@@ -29,9 +30,65 @@ $accent-color: #fd9228;
   .section_1 {
     background-color: #fff;
     width: $main_width * 0.45;
+    position: relative;
+    .download_section {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 5.5rem;
+      background-color: #ffa64f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > p {
+        font-size: 0.8rem;
+        padding-inline: 1rem;
+        color: #fff;
+      }
+    }
   }
   .section_2 {
     background-color: #ffbf80;
     width: $main_width * 0.55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .download_btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 7rem;
+      height: 5.5rem;
+      background-color: $accent-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .mockup {
+      z-index: 2;
+      margin-left: 3rem;
+      height: 65%;
+    }
+    &__top_right_shape {
+      width: ($main_width * 0.55) * 0.75;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &__bottom_right_shape {
+      width: ($main_width * 0.55) * 0.25;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    @media only screen and (min-width: 1300px) {
+      &__top_right_shape {
+        width: ($main_width * 0.55) * 0.55;
+      }
+      &__bottom_right_shape {
+        width: ($main_width * 0.55) * 0.15;
+      }
+    }
   }
 }
