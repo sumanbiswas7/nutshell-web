@@ -7,6 +7,9 @@ $fontSize-medium: 0.95rem;
   height: 100vh;
   $main_width: 100vw;
   width: $main_width;
+  @media only screen and (max-width: 970px) {
+    flex-direction: column;
+  }
   .navbar {
     margin-top: 2rem;
     position: absolute;
@@ -14,6 +17,10 @@ $fontSize-medium: 0.95rem;
     display: flex;
     justify-content: space-between;
     z-index: 2;
+    @media only screen and (max-width: 970px) {
+      margin: 0;
+      margin-top: 1rem;
+    }
     .full_logo {
       height: 2rem;
       margin-left: $margin-left;
@@ -27,6 +34,9 @@ $fontSize-medium: 0.95rem;
         font-size: 0.85rem;
         margin-inline: 1rem;
         color: #fff;
+        @media only screen and (max-width: 970px) {
+          display: none;
+        }
       }
     }
   }
@@ -37,24 +47,45 @@ $fontSize-medium: 0.95rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media only screen and (max-width: 970px) {
+      height: 50vh;
+      width: 100%;
+      justify-content: center;
+    }
     &__main_container {
       margin-left: $margin-left;
       margin-bottom: 2rem;
+
+      @media only screen and (max-width: 970px) {
+        margin: 0;
+      }
       &__upper_para {
         color: #ffbb77;
         text-transform: uppercase;
         font-size: $fontSize-small;
+        @media only screen and (max-width: 970px) {
+          margin: 0;
+          margin-top: 2.5rem;
+          font-size: 0.7rem;
+        }
       }
       &__middle_header {
         font-weight: bold;
         color: #363636;
         font-size: 3rem;
+        @media only screen and (max-width: 970px) {
+          font-size: 2rem;
+          margin-top: 1rem;
+        }
       }
       &__lower_para {
         width: 40ch;
         color: #7d7d7d;
         font-style: italic;
         font-size: $fontSize-medium;
+        @media only screen and (max-width: 970px) {
+          font-size: 0.8rem;
+        }
       }
       &__btn_container {
         display: flex;
@@ -72,6 +103,9 @@ $fontSize-medium: 0.95rem;
       display: flex;
       justify-content: center;
       align-items: center;
+      @media only screen and (max-width: 970px) {
+        display: none;
+      }
       & > p {
         font-size: 0.8rem;
         padding-inline: 1rem;
@@ -86,6 +120,10 @@ $fontSize-medium: 0.95rem;
     justify-content: center;
     align-items: center;
     position: relative;
+    @media only screen and (max-width: 970px) {
+      height: 50vh;
+      width: 100%;
+    }
     .download_btn {
       position: absolute;
       bottom: 0;
@@ -96,17 +134,27 @@ $fontSize-medium: 0.95rem;
       display: flex;
       justify-content: center;
       align-items: center;
+      @media only screen and (max-width: 970px) {
+        display: none;
+      }
     }
     .mockup {
       z-index: 2;
       margin-left: 3rem;
       height: 65%;
+      @media only screen and (max-width: 970px) {
+        height: 20rem;
+        margin-left: 2rem;
+      }
     }
     &__top_right_shape {
       width: ($main_width * 0.55) * 0.75;
       position: absolute;
       top: 0;
       right: 0;
+      @media only screen and (max-width: 970px) {
+        width: 15rem;
+      }
     }
     &__bottom_right_shape {
       width: ($main_width * 0.55) * 0.25;
