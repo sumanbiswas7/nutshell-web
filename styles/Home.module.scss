@@ -1,4 +1,7 @@
 $accent-color: #fd9228;
+$margin-left: 2rem;
+$fontSize-small: 0.85rem;
+$fontSize-medium: 0.95rem;
 .main {
   display: flex;
   height: 100vh;
@@ -13,7 +16,7 @@ $accent-color: #fd9228;
     z-index: 2;
     .full_logo {
       height: 2rem;
-      margin-left: 1rem;
+      margin-left: $margin-left;
     }
     .navlinks_container {
       display: flex;
@@ -31,6 +34,35 @@ $accent-color: #fd9228;
     background-color: #fff;
     width: $main_width * 0.45;
     position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__main_container {
+      margin-left: $margin-left;
+      margin-bottom: 2rem;
+      &__upper_para {
+        color: #ffbb77;
+        text-transform: uppercase;
+        font-size: $fontSize-small;
+      }
+      &__middle_header {
+        font-weight: bold;
+        color: #363636;
+        font-size: 3rem;
+      }
+      &__lower_para {
+        width: 40ch;
+        color: #7d7d7d;
+        font-style: italic;
+        font-size: $fontSize-medium;
+      }
+      &__btn_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: max-content;
+      }
+    }
     .download_section {
       position: absolute;
       bottom: 0;

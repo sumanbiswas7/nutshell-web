@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { NavButton } from "../components/navbutton/NavButton";
 import { HiOutlineDownload } from "react-icons/hi";
+import { DownloadButton } from "../components/downloadbutton/DownloadButton";
+import { EverythingPointer } from "../components/everythingpointer/EverythingPointer";
 
 export default function Home() {
   return (
@@ -32,6 +34,23 @@ export default function Home() {
           </div>
         </nav>
         <div className={styles.section_1}>
+          <div className={styles.section_1__main_container}>
+            <p className={styles.section_1__main_container__upper_para}>
+              The Simplest and the cheapest way to
+            </p>
+            <h1 className={styles.section_1__main_container__middle_header}>
+              Build your <br /> restaurant menu <br /> app
+            </h1>
+            <p className={styles.section_1__main_container__lower_para}>
+              Want to build your own restaurant app ?. we create customizable
+              app, perfect for your restaurant in the most affordable way. stay
+              with us to know more
+            </p>
+            <div className={styles.section_1__main_container__btn_container}>
+              <DownloadButton />
+              <EverythingPointer />
+            </div>
+          </div>
           <Link href="/">
             <a
               target={"_blank"}
