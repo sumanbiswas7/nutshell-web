@@ -7,6 +7,7 @@ import { NavButton } from "../components/navbutton/NavButton";
 import { HiOutlineDownload } from "react-icons/hi";
 import { DownloadButton } from "../components/downloadbutton/DownloadButton";
 import { EverythingPointer } from "../components/everythingpointer/EverythingPointer";
+import ApplyScreen from "./apply";
 
 export default function Home() {
   return (
@@ -51,7 +52,7 @@ export default function Home() {
               <EverythingPointer />
             </div>
           </div>
-          <Link href="/">
+          <Link href="https://play.google.com/store/apps/details?id=com.sumanbiswas.nutshell">
             <a
               target={"_blank"}
               rel="noreferrer"
@@ -76,7 +77,7 @@ export default function Home() {
             className={styles.section_2__bottom_right_shape}
           />
           <img src="/home/phone_mockup.webp" className={styles.mockup} />
-          <Link href="/">
+          <Link href="https://play.google.com/store/apps/details?id=com.sumanbiswas.nutshell">
             <a
               target={"_blank"}
               rel="noreferrer"
@@ -87,10 +88,7 @@ export default function Home() {
           </Link>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a></a>
-      </footer>
+      <ApplyScreen />
     </div>
   );
 }
