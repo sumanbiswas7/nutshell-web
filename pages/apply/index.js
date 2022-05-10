@@ -74,7 +74,19 @@ export default function ApplyScreen() {
           />
           <button className={styles.section_1__button}>SEND</button>
         </form>
-        <div className={styles.section_2}></div>
+        <div className={styles.section_2}>
+          <div className={styles.section_2__img_container}>
+            <img
+              style={{ width: 500, alignSelf: "center", marginBottom: 10 }}
+              className={styles.section_2__img_container__process_img}
+              src="/apply/process.png"
+            />
+            <img
+              className={styles.section_2__img_container__ad_img}
+              src="/apply/ad.webp"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
