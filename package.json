@@ -1,24 +1,16 @@
 {
-  "name": "nutshell-web",
-  "version": "0.1.0",
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "email-validator": "^2.0.4",
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-icons": "^4.3.1",
-    "react-toastify": "^9.0.1",
-    "sass": "^1.51.0"
-  },
-  "devDependencies": {
-    "eslint": "8.15.0",
-    "eslint-config-next": "12.1.6"
+    "astro": "^1.6.12"
   }
 }
