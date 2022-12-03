@@ -1,4 +1,5 @@
 ---
+import Content from "../components/Content.astro";
 import Logo from "../components/Logo.astro";
 import NavButton from "../components/NavButton.astro";
 import Layout from "../layouts/Layout.astro";
@@ -10,24 +11,49 @@ import Layout from "../layouts/Layout.astro";
       <Logo />
       <NavButton />
     </nav>
-    <div class="div-1"></div>
-    <div class="div-2"></div>
+    <div class="div-1 flex-center">
+      <Content />
+    </div>
+    <div class="div-2 flex-center">
+      <img class="mockup-img" src="./home/mobile.webp" />
+    </div>
   </main>
 </Layout>
 
 <style>
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   nav {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 1rem;
-	margin-top: 1rem;
+    padding-inline: 2rem;
+    margin-top: 1rem;
+    width: 100%;
   }
   main {
-    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
   }
   .div-1 {
+    min-height: -webkit-fill-available;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    width: 50vw;
+    height: 100vh;
   }
   .div-2 {
+    background: linear-gradient(180deg, #ffbf80 0%, #ffa64f 100%);
+    min-height: -webkit-fill-available;
+    width: 50vw;
+    height: 100vh;
+  }
+  .mockup-img {
+    margin-top: 2rem;
+    max-width: 20rem;
   }
 </style>
