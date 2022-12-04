@@ -1,7 +1,21 @@
 ---
 ---
 
-<script></script>
+<script>
+  const name_input = document.getElementById("name-input") as HTMLInputElement;
+  const email_input = document.getElementById(
+    "email-input"
+  ) as HTMLInputElement;
+  const message_input = document.getElementById(
+    "area-input"
+  ) as HTMLTextAreaElement;
+  const submit_btn = document.getElementById("submit-btn") as HTMLButtonElement;
+
+  submit_btn?.addEventListener("click", submit_handler);
+  function submit_handler(e: MouseEvent) {
+    e.preventDefault();
+  }
+</script>
 
 <form>
   <div class="input-box">
@@ -26,11 +40,18 @@
     <textarea placeholder="Leave your message here" id="area-input"></textarea>
   </div>
   <div class="input-box">
-    <button>SUBMIT</button>
+    <button id="submit-btn">SUBMIT</button>
   </div>
 </form>
 
 <style>
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-inline: 1rem;
+    margin-top: 1rem;
+  }
   * {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
   }
@@ -90,5 +111,10 @@
     font-weight: 700;
     color: var(--font);
     cursor: pointer;
+  }
+  @media only screen and (orientation: portrait) {
+    form {
+      /* margin-top: 1rem; */
+    }
   }
 </style>
