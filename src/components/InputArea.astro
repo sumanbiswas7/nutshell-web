@@ -1,0 +1,51 @@
+---
+const { title, placeholder, required } = Astro.props;
+---
+
+<div class="input-box">
+  <label class="input-label" for="area-input"
+    >{title}
+    <span style={`display: ${required ? "auto" : "none"}`} class="required-star"
+      >*</span
+    >
+  </label>
+  <textarea placeholder={placeholder} id="area-input"></textarea>
+</div>
+
+<style>
+  * {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+  }
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    max-width: 40rem;
+  }
+  .required-star {
+    color: rgb(224, 49, 49);
+  }
+  .input-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  #area-input {
+    padding: 0.2rem 0.5rem;
+    padding-top: 0.5em;
+    height: 2.2rem;
+    resize: vertical;
+    min-height: 10rem;
+    max-height: 20rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: 100ms border-color ease 0s;
+    outline: none;
+  }
+  #area-input::placeholder {
+    color: #ced4da;
+  }
+  #area-input:focus {
+    border-color: var(--accent);
+  }
+</style>
