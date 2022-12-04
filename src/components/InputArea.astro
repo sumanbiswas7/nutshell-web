@@ -2,6 +2,16 @@
 const { title, placeholder, required } = Astro.props;
 ---
 
+<script>
+  const area_input = document.getElementById(
+    "area-input"
+  ) as HTMLTextAreaElement;
+  area_input?.addEventListener("input", handleChange);
+  function handleChange() {
+    console.log(area_input.value);
+  }
+</script>
+
 <div class="input-box">
   <label class="input-label" for="area-input"
     >{title}

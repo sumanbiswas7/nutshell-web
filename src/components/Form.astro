@@ -1,12 +1,94 @@
 ---
-import Input from "./Input.astro";
-import InputArea from "./InputArea.astro";
 ---
 
+<script></script>
+
 <form>
-  <Input title="Name" required placeholder="john doe" />
-  <Input title="Email" required placeholder="your@email.com" />
-  <InputArea title="Message" placeholder="leave your message here" />
+  <div class="input-box">
+    <label class="input-label" for="name-input"
+      >Name
+      <span style={`display: auto`} class="required-star">*</span>
+    </label>
+    <input placeholder="john doe" id="name-input" />
+  </div>
+  <div class="input-box">
+    <label class="input-label" for="email-input"
+      >Email
+      <span style={`display: auto`} class="required-star">*</span>
+    </label>
+    <input placeholder="your@email.com" id="email-input" />
+  </div>
+  <div class="input-box">
+    <label class="input-label" for="area-input"
+      >Message
+      <span style={`display: none`} class="required-star">*</span>
+    </label>
+    <textarea placeholder="Leave your message here" id="area-input"></textarea>
+  </div>
+  <div class="input-box">
+    <button>SUBMIT</button>
+  </div>
 </form>
 
-<style></style>
+<style>
+  * {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+  }
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    max-width: 40rem;
+  }
+  .required-star {
+    color: rgb(224, 49, 49);
+  }
+  .input-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  input {
+    padding: 0.2rem 0.5rem;
+    height: 2.2rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: 100ms border-color ease 0s;
+    outline: none;
+  }
+  input::placeholder {
+    color: #ced4da;
+  }
+  input:focus {
+    border-color: var(--accent);
+  }
+  textarea {
+    padding: 0.2rem 0.5rem;
+    padding-top: 0.5em;
+    height: 2.2rem;
+    resize: vertical;
+    min-height: 10rem;
+    max-height: 20rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: 100ms border-color ease 0s;
+    outline: none;
+  }
+  textarea::placeholder {
+    color: #ced4da;
+  }
+  textarea:focus {
+    border-color: var(--accent);
+  }
+  button {
+    margin-top: 0.5rem;
+    height: 2.2rem;
+    outline: none;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--font);
+    cursor: pointer;
+  }
+</style>
