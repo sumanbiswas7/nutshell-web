@@ -10,6 +10,7 @@ const { title, placeholder, required } = Astro.props;
     >
   </label>
   <textarea placeholder={placeholder} id="area-input"></textarea>
+  <button>SUBMIT</button>
 </div>
 
 <style>
@@ -47,5 +48,15 @@ const { title, placeholder, required } = Astro.props;
   }
   #area-input:focus {
     border-color: var(--accent);
+  }
+  button {
+    margin-top: 0.5rem;
+    height: 2.2rem;
+    outline: none;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    color: var(--font);
   }
 </style>
