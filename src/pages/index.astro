@@ -77,7 +77,11 @@ import Layout from "../layouts/Layout.astro";
       max-width: 17rem;
     }
   }
-
+  @media only screen and (max-width: 330px) {
+    .mockup-img {
+      width: 70vw;
+    }
+  }
   @media only screen and (orientation: landscape) and (max-width: 875px) {
     .mockup-img {
       max-width: 40vw;

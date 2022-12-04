@@ -27,7 +27,7 @@
     color: var(--accent-mid);
     color: var(--accent);
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
   h1 {
     width: 12ch;
@@ -38,7 +38,7 @@
     color: #7d7d7d;
     max-width: 40ch;
     margin-top: 1rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
   .bottom-div {
     margin-top: 1rem;
@@ -63,10 +63,17 @@
   @media only screen and (orientation: portrait) {
     h1 {
       font-size: 2.3rem;
+      font-size: 10vw;
     }
     .container {
       margin-top: 2rem;
       padding-block: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 330px) {
+    .bottom-img {
+      display: none;
     }
   }
 
